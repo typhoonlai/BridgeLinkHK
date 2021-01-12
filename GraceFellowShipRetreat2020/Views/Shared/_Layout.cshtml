@@ -1,0 +1,460 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Bridgelink International</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        /*position whatsapp image to the bottom right*/
+        img#whatsapp {
+            width: 70px;
+            height: 70px;
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            z-index: 999;
+        }
+
+     
+    </style>
+   
+
+    @RenderSection("head", false);
+</head>
+<body>
+
+    <script>
+        /*to include facebook messenger
+        < !--go to facebook page, page settings -> Advanced Messaging -> whitelisted Domains -> enter your page url make sure it is https-- >
+        < !--go to facebook page, page settings -> Messaging -> Add Messenger to your website -> Get Started-- >
+        */
+        //   Load Facebook SDK for JavaScript
+
+
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v8.0'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/zh_HK/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <!-- Your Chat Plugin code -->
+    <div class="fb-customerchat"
+         attribution=setup_tool
+         page_id="108865273938240"
+         theme_color="#ffc300"
+         logged_in_greeting="你好! 我們有什麼可以幫助您？"
+         logged_out_greeting="你好! 我們有什麼可以幫助您？">
+    </div>
+    <!-- END section -->
+
+
+
+
+    <header role="banner">
+        <div class="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-5">
+                        <ul class="social list-unstyled">
+                            <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                            <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-7 text-right">
+                        <p class="mb-0">
+                            <a href="#" class="cta-btn" data-toggle="modal" data-target="#modalAppointment">聯絡我們</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top " id="mainnavbar">
+            <div class="container">
+
+
+                <a class="navbar-brand" href="/home/index"><img src="~/img/brigelinklogo.png" width="262" height="78" /> </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarsExample05">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a id="FirstLink" class="nav-link" href="/Home/singapore">主頁</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a id="SecondLink" class="nav-link" href="/Home/SingaporeImmigration">移民新加坡</a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Home/WhySingapore">新加坡的優勢</a>
+
+                        </li>
+                        <li>
+                            <a class="nav-link" href="/Home/SingaporeVideos">移民新加坡影片</a>
+
+                        </li>
+                        <li>
+                            <a class="nav-link" href="/Home/Education">新加坡升學</a>
+
+                        </li>
+                        <!--li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="Home/SchoolCompare" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">新加坡教育</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown05">
+            <a class="dropdown-item" href="/Home/SPSchoolCompare">學制比較</a>
+            <a class="dropdown-item" href="/Home/SPSchools">學校</a>
+        </div>
+    </li-->
+                        <!--li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown06" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">新加坡升學</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown06">
+
+            <a class="dropdown-item" href="/home/SPRegistration">申請程序</a>
+            <a class="dropdown-item" href="/home/SPAEIS">AEIS</a>
+
+        </div>
+    </li-->
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" style="cursor: pointer;" data-target='#modalAppointment' data-toggle="modal">聯絡我們</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+
+
+    @RenderBody()
+
+    <a href="#" class="cta-link element-animate" data-toggle="modal" data-target="#modalAppointment">
+        <span class="sub-heading">你準備好了嗎?</span>
+        <span class="heading">聯絡我們</span>
+    </a>
+    <!-- END cta-link -->
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="row mb-5 element-animate">
+                <div class="col-md-6 mb-5">
+
+                    <table class="text-white">
+                        <tr>
+                            <td>聯絡電話：</td>
+                            <td>(852) 3101 4978</td>
+                        </tr>
+                        <tr>
+                            <td>商務溝通：</td>
+                            <td><a href="mailto:info@bridgelinkhk.com">info@bridgelinkhk.com</a></td>
+                        </tr>
+                        <tr>
+                            <td>服務時間：</td>
+                            <td>09：00 – 18：00</td>
+                        </tr>
+                        <tr>
+                            <td>公司地址：</td>
+                            <td>九龍尖沙咀海港城海洋中心11樓1112A室</td>
+                        </tr>
+                        <tr>
+                            <td>新加坡分公司地址：</td>
+                            <td>60 Paya Lebar Road #11-27,<br />Paya Lebar Square, Singapore<br /> 490051</td>
+                        </tr>
+                        <tr>
+                            <td>加拿大分公司地址：</td>
+                            <td>
+                                1108 - 250 Consumers Road#162<br />
+                                North York, ON M2J 4V6
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+                <div class="col-md-6 mb-5">
+
+
+
+                </div>
+            </div>
+            <!--div class="row mb-5 element-animate">
+                <div class="col-md-3 mb-5">
+                    <h3>Services</h3>
+                    <ul class="footer-link list-unstyled">
+                        <li><a href="#">Find a doctor</a></li>
+                        <li><a href="#">Urgent Care</a></li>
+                        <li><a href="#">Emergency Care</a></li>
+                        <li><a href="#">Procedures &amp; Treatments</a></li>
+                        <li><a href="#">Online Services</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-5">
+                    <h3>Latest News</h3>
+                    <ul class="footer-link list-unstyled">
+                        <li><a href="#">News &amp; Press Releases</a></li>
+                        <li><a href="#">Health Care Professional News</a></li>
+                        <li><a href="#">Events &amp; Conferences</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-5">
+                    <h3>About</h3>
+                    <ul class="footer-link list-unstyled">
+                        <li><a href="#">About The Hospital</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Accreditations &amp; Awards</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-5">
+                    <h3>Location &amp; Contact</h3>
+                    <p class="mb-5">134 Street Name, City Name Here, United States</p>
+                    <h4 class="text-uppercase mb-3 h6 text-white">
+                        Email</h5>
+                        <p class="mb-5"><a href="mailto:info@yourdomain.com">info@yourdomain.com</a></p>
+
+                        <h4 class="text-uppercase mb-3 h6 text-white">
+                            Phone</h5>
+                            <p>+1 24 435 3533</p>
+                </div>
+            </div-->
+            <div class="row pt-md-3 element-animate">
+                <div class="col-md-12">
+                    <hr class="border-t">
+                </div>
+                <div class="col-md-6 col-sm-12 copyright">
+                    <p>&copy; 2020 Bridgelink International &amp; Developed by <a href="mailto:alai2@hotmail.com">Andrew Lai</a></p>
+                </div>
+                <div class="col-md-6 col-sm-12 text-md-right text-sm-left">
+                    <a href="https://www.facebook.com/%E5%8D%9A%E7%BF%B9%E5%9C%8B%E9%9A%9B%E7%A7%BB%E6%B0%91%E5%8F%8A%E5%8D%87%E5%AD%B8-108865273938240" target="_blank" class="p-2"><span class="fa fa-facebook"></span></a>
+                    <a href="#" class="p-2"><span class="fa fa-twitter"></span></a>
+                    <a target="_blank" href="https://instagram.com/bridgelinkhk?idshid=wlh9mbnl044k" class="p-2"><span class="fa fa-instagram"></span></a>
+                    <a href="tel:6474698985" class="p-2"><span class="fa fa-phone"></span></a>
+                    <a href="https://api.whatsapp.com/send?phone=85267998870" class="p-2"><span class="fa fa-whatsapp"></span></a>
+                    <a href"mailto:tracy@bridgelinkintl.com class="p-2"><span class="fa fa-envelope"></span></a>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="fadeIn"><a style="text-decoration:none"  target="_blank" href="https://api.whatsapp.com/send?phone=85267998870"><img src="~/img/whatsapp.png" id="whatsapp"  /></a></div>
+    <!-- END footer -->
+    <!-- Modals -->
+    @using (Html.BeginForm("Contact", "ContactUs", FormMethod.Post, new { onsubmit = "return SubmitContactUsForm(this)" }))
+
+    {
+        <div class="modal fade" id="modalAppointment" tabindex="-1" role="dialog" aria-labelledby="modalAppointmentLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalAppointmentLabel">聯絡我們</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="#">
+                            <div class="form-group">
+                                <label for="appointment_name" class="text-black">
+                                    您的名字
+                                </label>
+                                <input type="text" class="form-control" name="ContactName" id="ContactName">
+                                <span id="ErrContactName" style="color:#ff0000;font-size:large"></span>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="appointment_email" class="text-black">電子郵件地址</label>
+                                <input type="text" class="form-control" name="ContactEmail" id="ContactEmail">
+                                <span id="ErrContactEmail" style="color:#ff0000;font-size:large"></span>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="appointment_message" class="text-black">您的訊息</label>
+                                <textarea id="ContactMessage" name="ContactMessage" class="form-control" cols="30" rows="10"></textarea>
+                                <span id="ErrContactMessage" style="color:#ff0000;font-size:large"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="OptIn" name="OptIn" checked><label for="OptIn"> <span style="font-size:smaller;padding-left:5px;vertical-align:middle">我同意接受博翹國際發送的新聞通訊和新聞訊息</span></label>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="發送信息" id="btnContactUs" class="btn btn-primary">
+                                <input type="hidden" id="CurrentURL" />
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    }
+
+    <!--scripts dont move the location-->
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/bootstrap-datepicker.js"></script>
+    <script src="/js/jquery.timepicker.min.js"></script>
+    <script src="/js/jquery.waypoints.min.js"></script>
+    <script src="/js/main.js"></script>
+    <!--end of scripts-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400, 700" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/css/jquery.timepicker.css">
+    <link rel="stylesheet" href="/fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="/fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/fonts/flaticon/font/flaticon.css">
+    <script type="text/javascript">
+
+
+        //set navigation base on user click
+        $(document).ready(function () {
+            $(function () {
+                var current = location.pathname;
+             
+                    $(document).ready(function () {
+                        $("img#whatsapp").fadeIn(1000);
+                    });
+  
+                console.log("current url:" + current);
+                $('#mainnavbar li a').each(function () {
+                    //  console.log("loop thru href:" + $this.attr('href').toString());
+                    var $this = $(this);
+                    // if the current path is like this link, make it active
+                    if ($this.attr('href').indexOf(current) !== -1) {
+
+                        $this.addClass('active');
+                    }
+
+                });
+            })
+        });
+
+
+        function PopupForm(url, div_id) {//get the contents of the modal box, the modal must reside in the same page as the calling function
+
+            var formDiv = $(div_id);
+            //  var formDiv = $('#editSpeaker');
+            $.get(url)
+                .done(function (response) {
+
+                    formDiv.html(response);
+
+
+                });
+        }
+        function SubmitContactUsForm(form) {
+            debugger;
+            // console.log("contact name" + $('#ContactName').val());
+            var ContactName = $('#ContactName').val();
+            var ContactEmail = $('#ContactEmail').val();
+            var ContactMessage = $('#ContactMessage').val();
+            var OptIn;
+            //  $.validator.unobtrusive.parse(form);
+            if ($('#ContactName').val() == "") {
+
+                // $('#ErrContactName').val("請填入你的名字");
+                $('#ErrContactName').html("*請填入你的名字");
+                return false;
+            } else {
+                $('#ErrContactName').html("");
+            }
+            if ($('#ContactEmail').val() == "") {
+
+                // $('#ErrContactName').val("請填入你的電子郵件地址");
+                $('#ErrContactEmail').html("*請填入你的電子郵件地址");
+                return false;
+            } else {
+                $('#ErrContactEmail').html("");
+            }
+            if ($('#ContactMessage').val() == "") {
+
+                // $('#ErrContactMessage').val("請填入你的信息");
+                $('#ErrContactMessage').html("*請填入你的信息");
+                return false;
+            } else {
+                $('#ErrContactMessage').html("");
+
+            }
+            // var getURL = window.location.href;
+            //$("#CurrentURL").val(getURL);
+            // document.getElementById('CurrentURL').value = window.location;
+
+            console.log('currenturl:' + document.getElementById('CurrentURL').value)
+            // if ($(form).valid()) {
+            //debugger;
+
+            if ($('#OptIn').is(":checked")) {
+                OptIn = true;
+            }
+            else {
+
+                OptIn = false;
+            }
+            var ContactUsModel = {
+
+                ContactName: $('#ContactName').val(),
+                ContactEmail: $('#ContactEmail').val(),
+                ContactMessage: $('#ContactMessage').val(),
+                CurrentURL: $(location).attr("href"),
+
+                OptIn: OptIn
+
+            }
+            $.ajax({
+                type: "POST",
+                url: form.action,
+                //data: $(form).serialize(),
+                data: ContactUsModel,
+                async: false,
+                success: function (data) {
+                    debugger;
+                    if (data.result) {
+                        // console.log("result: " + data.result)
+                        // alert('success: result' + result.d)
+                        //  window.location = "/Dashboard/Index";
+                        $('#modalAppointment').modal('hide');
+                        //dataTable.ajax.reload();
+
+                    }
+                    else {
+                        // console.log("result: " + data.result)
+                        // alert('failure: result' + result)
+                        //error check switched to server side
+                        //   $('#lblError').html('must at least 5 days prior to session date');
+                        // dataTable.ajax.reload();
+                        console.log("Error while process modify event form")
+                    }
+                }
+            });
+            //}
+            return false;
+        }
+
+
+    </script>
+
+</body>
+</html>

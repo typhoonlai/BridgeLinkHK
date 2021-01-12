@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Bridgelink International</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="~/js/jquery-3.2.1.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Demo styles -->
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        #VideoPlayer {
+            /*border: 1px solid red;*/
+            height: 80%;
+            width: 95%;/* leave some space for the social icon otherwise they dont hover*/
+            background-color: black;
+            margin: 0 auto;/*center the player and x mark*/
+        }
+
+        #player {
+            
+            height: 100%;
+            width: 95%;/*take the full height of the container Video Player, leave 5% space to the x button*/
+        }
+
+        #btnclose {
+            width: 5%;/*x button is float to the right*/
+        }
+        #btnclose {
+            display: block;
+            float: right;
+            padding-left: 2%;
+            background-color: #000;
+            text-decoration: none;
+            color: #fff;
+            font-size: 2rem;
+        }
+
+        a#btnclose:hover {
+            /*-webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);*/
+        }
+        body {
+            height: 100%;
+            background: #000;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            height: 100%;
+            
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 20%;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            background-color: black;
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 252px;
+            height: 156px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var pageTitle = document.title; //HTML page title
+            var pageUrl = location.href; //Location of this page
+
+            $('.share-btn-wrp li').click(function (event) {
+                var shareName = $(this).attr('class').split(' ')[0]; //get the first class name of clicked element
+                switch (shareName) //switch to different links based on different social name
+                {
+                    case 'facebook':
+                        OpenShareUrl('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&amp;title=' + encodeURIComponent(pageTitle));
+                        break;
+                    case 'twitter':
+                        OpenShareUrl('http://twitter.com/home?status=' + encodeURIComponent(pageTitle + ' ' + pageUrl));
+                        break;
+                    case 'digg':
+                        OpenShareUrl('http://www.digg.com/submit?phase=2&amp;url=' + encodeURIComponent(pageUrl) + '&amp;title=' + encodeURIComponent(pageTitle));
+                        break;
+                    case 'stumbleupon':
+                        OpenShareUrl('http://www.stumbleupon.com/submit?url=' + encodeURIComponent(pageUrl) + '&amp;title=' + encodeURIComponent(pageTitle));
+                        break;
+                    case 'delicious':
+                        OpenShareUrl('http://del.icio.us/post?url=' + encodeURIComponent(pageUrl) + '&amp;title=' + encodeURIComponent(pageTitle));
+                        break;
+                    case 'gplus':
+                        OpenShareUrl('https://plus.google.com/share?url=' + encodeURIComponent(pageUrl) + '&amp;title=' + encodeURIComponent(pageTitle));
+                        break;
+                    case 'email':
+                        OpenShareUrl('mailto:?subject=' + pageTitle + '&body=Found this useful link for you : ' + pageUrl);
+                        break;
+                }
+
+            });
+
+            function OpenShareUrl(openLink) {
+                //Parameters for the Popup window
+                winWidth = 650;
+                winHeight = 450;
+                winLeft = ($(window).width() - winWidth) / 2,
+                    winTop = ($(window).height() - winHeight) / 2,
+                    winOptions = 'width=' + winWidth + ',height=' + winHeight + ',top=' + winTop + ',left=' + winLeft;
+                window.open(openLink, 'Share This Link', winOptions); //open Popup window to share website.
+                return false;
+            }
+        });
+    </script>
+</head>
+
+<body>
+    @RenderBody()
+    <!-- Swiper -->
+  
+
+    <!-- Swiper JS -->
+    <script src="../package/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    </script>
+</body>
+
+</html>
+

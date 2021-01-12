@@ -1,0 +1,481 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7B97E75C-091D-4051-A95B-DEFE11591B78}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>tcPandemicShop</RootNamespace>
+    <AssemblyName>tcPandemicShop</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ContactUsController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContactUsModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\datatables.css" />
+    <Content Include="Content\flex-slider.css" />
+    <Content Include="Content\fontawesome.css" />
+    <Content Include="Content\footable.standalone.css" />
+    <Content Include="Content\owl.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="Content\tooplate-main.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="images\6360_01.jpg" />
+    <Content Include="images\6370_01.jpg" />
+    <Content Include="images\about-us.jpg" />
+    <Content Include="images\AdobeReader.png" />
+    <Content Include="images\banner-bg.jpg" />
+    <Content Include="images\big-01.jpg" />
+    <Content Include="images\big-02.jpg" />
+    <Content Include="images\big-03.jpg" />
+    <Content Include="images\big-04.jpg" />
+    <Content Include="images\Categories\1010_1.png" />
+    <Content Include="images\Categories\bag.png" />
+    <Content Include="images\Categories\clock.png" />
+    <Content Include="images\Categories\diffuser.png" />
+    <Content Include="images\Categories\DisasterSet.png" />
+    <Content Include="images\Categories\Lantern.png" />
+    <Content Include="images\Categories\LedLight.png" />
+    <Content Include="images\Categories\mobile.png" />
+    <Content Include="images\Categories\MotionSensor.png" />
+    <Content Include="images\Categories\RadioLight.png" />
+    <Content Include="images\Categories\SolarRadio.png" />
+    <Content Include="images\Categories\WineOpener.png" />
+    <Content Include="images\companylogo.png" />
+    <Content Include="images\download.jpg" />
+    <Content Include="images\download.png" />
+    <Content Include="images\header-logo.png" />
+    <Content Include="images\item-01.jpg" />
+    <Content Include="images\item-02.jpg" />
+    <Content Include="images\item-03.jpg" />
+    <Content Include="images\item-04.jpg" />
+    <Content Include="images\item-05.jpg" />
+    <Content Include="images\item-06.jpg" />
+    <Content Include="images\product-01.jpg" />
+    <Content Include="images\product-02.jpg" />
+    <Content Include="images\product-03.jpg" />
+    <Content Include="images\product-04.jpg" />
+    <Content Include="images\product-05.jpg" />
+    <Content Include="images\product-06.jpg" />
+    <Content Include="images\Products\1010_01.png" />
+    <Content Include="images\Products\105_01.png" />
+    <Content Include="images\Products\3080_01.jpg" />
+    <Content Include="images\Products\3080_02.jpg" />
+    <Content Include="images\Products\3080_03.jpg" />
+    <Content Include="images\Products\3080_04.jpg" />
+    <Content Include="images\Products\3080_05.jpg" />
+    <Content Include="images\Products\3080_06.jpg" />
+    <Content Include="images\Products\3080_07.jpg" />
+    <Content Include="images\Products\3100_01.jpg" />
+    <Content Include="images\Products\3100_02.jpg" />
+    <Content Include="images\Products\3100_03.jpg" />
+    <Content Include="images\Products\3100_04.jpg" />
+    <Content Include="images\Products\3100_05.jpg" />
+    <Content Include="images\Products\3100_06.jpg" />
+    <Content Include="images\Products\3100_07.jpg" />
+    <Content Include="images\Products\3200_01.jpg" />
+    <Content Include="images\Products\3200_02.jpg" />
+    <Content Include="images\Products\3200_03.jpg" />
+    <Content Include="images\Products\3200_04.jpg" />
+    <Content Include="images\Products\3200_05.jpg" />
+    <Content Include="images\Products\3200_06.jpg" />
+    <Content Include="images\Products\3200_07.jpg" />
+    <Content Include="images\Products\3540_01.jpg" />
+    <Content Include="images\Products\3540_01.png" />
+    <Content Include="images\Products\3540_02.jpg" />
+    <Content Include="images\Products\3540_03.jpg" />
+    <Content Include="images\Products\3540_04.jpg" />
+    <Content Include="images\Products\3540_05.jpg" />
+    <Content Include="images\Products\3540_06.jpg" />
+    <Content Include="images\Products\3540_07.jpg" />
+    <Content Include="images\Products\3550_01.jpg" />
+    <Content Include="images\Products\3550_02.jpg" />
+    <Content Include="images\Products\3550_03.jpg" />
+    <Content Include="images\Products\3550_04.jpg" />
+    <Content Include="images\Products\3550_05.jpg" />
+    <Content Include="images\Products\3560_01.jpg" />
+    <Content Include="images\Products\3560_02.jpg" />
+    <Content Include="images\Products\3560_03.jpg" />
+    <Content Include="images\Products\3560_04.jpg" />
+    <Content Include="images\Products\3560_05.jpg" />
+    <Content Include="images\Products\3560_06.jpg" />
+    <Content Include="images\Products\3560_07.jpg" />
+    <Content Include="images\Products\3570_01.jpg" />
+    <Content Include="images\Products\3570_01.png" />
+    <Content Include="images\Products\3570_02.png" />
+    <Content Include="images\Products\3570_03.png" />
+    <Content Include="images\Products\3570_04.png" />
+    <Content Include="images\Products\3570_06.png" />
+    <Content Include="images\Products\4070_01.jpg" />
+    <Content Include="images\Products\4070_02.jpg" />
+    <Content Include="images\Products\4070_03.jpg" />
+    <Content Include="images\Products\4070_04.jpg" />
+    <Content Include="images\Products\4070_05.jpg" />
+    <Content Include="images\Products\4070_06.jpg" />
+    <Content Include="images\Products\4070_07.jpg" />
+    <Content Include="images\Products\4070_08.jpg" />
+    <Content Include="images\Products\4070_09.jpg" />
+    <Content Include="images\Products\4070_10.jpg" />
+    <Content Include="images\Products\4070_11.jpg" />
+    <Content Include="images\Products\4505_01.jpg" />
+    <Content Include="images\Products\4505_02.jpg" />
+    <Content Include="images\Products\5567_01.jpg" />
+    <Content Include="images\Products\5599_01.jpg" />
+    <Content Include="images\Products\5599_02.jpg" />
+    <Content Include="images\Products\5605C_01.jpg" />
+    <Content Include="images\Products\5605C_02.jpg" />
+    <Content Include="images\Products\5605C_03.jpg" />
+    <Content Include="images\Products\5605C_04.jpg" />
+    <Content Include="images\Products\5605C_05.jpg" />
+    <Content Include="images\Products\5605C_06.jpg" />
+    <Content Include="images\Products\5605C_07.jpg" />
+    <Content Include="images\Products\5605C_08.jpg" />
+    <Content Include="images\Products\5622_01.jpg" />
+    <Content Include="images\Products\5623_01.jpg" />
+    <Content Include="images\Products\5818_01.jpg" />
+    <Content Include="images\Products\5818_02.jpg" />
+    <Content Include="images\Products\5818_03.jpg" />
+    <Content Include="images\Products\5818_04.jpg" />
+    <Content Include="images\Products\5818_05.jpg" />
+    <Content Include="images\Products\5833C_01 %281%29.jpg" />
+    <Content Include="images\Products\5833C_01.jpg" />
+    <Content Include="images\Products\5833C_02 %281%29.jpg" />
+    <Content Include="images\Products\5833C_02.jpg" />
+    <Content Include="images\Products\5833C_03 %281%29.jpg" />
+    <Content Include="images\Products\5833C_03.jpg" />
+    <Content Include="images\Products\5870_01.jpg" />
+    <Content Include="images\Products\5963C_01.jpg" />
+    <Content Include="images\Products\5963C_02.jpg" />
+    <Content Include="images\Products\5963C_03.jpg" />
+    <Content Include="images\Products\6000C_01.jpg" />
+    <Content Include="images\Products\6000C_02.jpg" />
+    <Content Include="images\Products\6000C_03.jpg" />
+    <Content Include="images\Products\6125_01.jpg" />
+    <Content Include="images\Products\6125_02.jpg" />
+    <Content Include="images\Products\6221_01.jpg" />
+    <Content Include="images\Products\6221_02.jpg" />
+    <Content Include="images\Products\6250_01.jpg" />
+    <Content Include="images\Products\6250_02.jpg" />
+    <Content Include="images\Products\6255_01.jpg" />
+    <Content Include="images\Products\6255_02.jpg" />
+    <Content Include="images\Products\6330_01.jpg" />
+    <Content Include="images\Products\6350_01.jpg" />
+    <Content Include="images\Products\6360_01.jpg" />
+    <Content Include="images\Products\6370_01.jpg" />
+    <Content Include="images\Products\6440_01.jpg" />
+    <Content Include="images\Products\6450_01.jpg" />
+    <Content Include="images\Products\6480_01.jpg" />
+    <Content Include="images\Products\6485_01.jpg" />
+    <Content Include="images\Products\6490_01.jpg" />
+    <Content Include="images\Products\6495_01.jpg" />
+    <Content Include="images\Products\6700_01.jpg" />
+    <Content Include="images\Products\6720_01.jpg" />
+    <Content Include="images\Products\6930_01.jpg" />
+    <Content Include="images\Products\6940_01.jpg" />
+    <Content Include="images\Products\6950_01.jpg" />
+    <Content Include="images\Products\6991C_01.jpg" />
+    <Content Include="images\Products\6991C_02.jpg" />
+    <Content Include="images\Products\6991C_03.jpg" />
+    <Content Include="images\Products\6991C_04.jpg" />
+    <Content Include="images\Products\7010_01.jpg" />
+    <Content Include="images\Products\7020_01.jpg" />
+    <Content Include="images\Products\7020_02.jpg" />
+    <Content Include="images\Products\7030_01.jpg" />
+    <Content Include="images\Products\8010_01.jpg" />
+    <Content Include="images\Products\8020_01.jpg" />
+    <Content Include="images\Products\8030_01.jpg" />
+    <Content Include="images\Products\8040_01.jpg" />
+    <Content Include="images\Products\FL350_01.jpg" />
+    <Content Include="images\Products\FL350_02.jpg" />
+    <Content Include="images\Products\FL350_03.jpg" />
+    <Content Include="images\Products\FL350_04.jpg" />
+    <Content Include="images\Products\rl250_01.jpg" />
+    <Content Include="images\thumb-01.jpg" />
+    <Content Include="images\thumb-02.jpg" />
+    <Content Include="images\thumb-03.jpg" />
+    <Content Include="images\thumb-04.jpg" />
+    <Content Include="images\Thumbnails\1010_01.png" />
+    <Content Include="images\Thumbnails\1010_02.png" />
+    <Content Include="images\Thumbnails\1010_03.png" />
+    <Content Include="images\Thumbnails\1010_04.png" />
+    <Content Include="images\Thumbnails\105_01.png" />
+    <Content Include="images\Thumbnails\105_02.png" />
+    <Content Include="images\Thumbnails\105_03.png" />
+    <Content Include="images\Thumbnails\105_04.png" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\custom.js" />
+    <Content Include="Scripts\datatables.js" />
+    <Content Include="Scripts\flex-slider.js" />
+    <Content Include="Scripts\footable.js" />
+    <Content Include="Scripts\isotope.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.slim.js" />
+    <Content Include="Scripts\jquery.slim.min.js" />
+    <Content Include="Scripts\jquery.twbsPagination.min.js" />
+    <Content Include="Scripts\owl.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_ProductLayout.cshtml" />
+    <Content Include="Views\Product\BagDetails.cshtml" />
+    <Content Include="Views\Product\Bag_1010.cshtml" />
+    <Content Include="Views\Product\Bag_105.cshtml" />
+    <Content Include="Views\Product\CategoryList.cshtml" />
+    <Content Include="Views\Product\DiffuserDetails.cshtml" />
+    <Content Include="Views\Product\Diffuser_6700.cshtml" />
+    <Content Include="Views\Product\Diffuser_6720.cshtml" />
+    <Content Include="Views\Product\Diffuser_7010.cshtml" />
+    <Content Include="Views\Product\Diffuser_7020.cshtml" />
+    <Content Include="Views\Product\Diffuser_7030.cshtml" />
+    <Content Include="Views\Product\DPSDetails.cshtml" />
+    <Content Include="Views\Product\DPS_3080.cshtml" />
+    <Content Include="Views\Product\DPS_3100.cshtml" />
+    <Content Include="Views\Product\DPS_3200.cshtml" />
+    <Content Include="Views\Product\DPS_3540.cshtml" />
+    <Content Include="Views\Product\DPS_3550.cshtml" />
+    <Content Include="Views\Product\DPS_3560.cshtml" />
+    <Content Include="Views\Product\DPS_3570.cshtml" />
+    <Content Include="Views\Product\DPS_4070.cshtml" />
+    <Content Include="Views\Product\LEDDetails.cshtml" />
+    <Content Include="Views\Product\LED_6330.cshtml" />
+    <Content Include="Views\Product\LED_6440.cshtml" />
+    <Content Include="Views\Product\LED_6495.cshtml" />
+    <Content Include="Views\Product\LED_FL350.cshtml" />
+    <Content Include="Views\Product\LED_RL250.cshtml" />
+    <Content Include="Views\Product\MobileDetails.cshtml" />
+    <Content Include="Views\Product\Mobile_5870.cshtml" />
+    <Content Include="Views\Product\Mobile_6125.cshtml" />
+    <Content Include="Views\Product\MotionSensorDetails.cshtml" />
+    <Content Include="Views\Product\MotionSensor_6360.cshtml" />
+    <Content Include="Views\Product\MotionSensor_6370.cshtml" />
+    <Content Include="Views\Product\OutdoorLanternDetails.cshtml" />
+    <Content Include="Views\Product\OutdoorLantern_6221.cshtml" />
+    <Content Include="Views\Product\OutdoorLantern_6250.cshtml" />
+    <Content Include="Views\Product\OutdoorLantern_6255.cshtml" />
+    <Content Include="Views\Product\OutdoorLantern_6350.cshtml" />
+    <Content Include="Views\Product\RadioClockDetails.cshtml" />
+    <Content Include="Views\Product\RadioClock_5567.cshtml" />
+    <Content Include="Views\Product\RadioClock_5622.cshtml" />
+    <Content Include="Views\Product\RadioClock_5623.cshtml" />
+    <Content Include="Views\Product\RadioLightDetails.cshtml" />
+    <Content Include="Views\Product\RadioLight_4505.cshtml" />
+    <Content Include="Views\Product\RadioLight_5599.cshtml" />
+    <Content Include="Views\Product\RadioLight_5605C.cshtml" />
+    <Content Include="Views\Product\RadioLight_5818.cshtml" />
+    <Content Include="Views\Product\RadioLight_5833C.cshtml" />
+    <Content Include="Views\Product\RadioLight_5963C.cshtml" />
+    <Content Include="Views\Product\RadioLight_6000C.cshtml" />
+    <Content Include="Views\Product\RadioLight_6991C.cshtml" />
+    <Content Include="Views\Product\SolarRadioDetails.cshtml" />
+    <Content Include="Views\Product\SolarRadio_6450.cshtml" />
+    <Content Include="Views\Product\SolarRadio_6480.cshtml" />
+    <Content Include="Views\Product\SolarRadio_6485.cshtml" />
+    <Content Include="Views\Product\SolarRadio_6490.cshtml" />
+    <Content Include="Views\Product\SolarRadio_6930.cshtml" />
+    <Content Include="Views\Product\SolarRadio_6940.cshtml" />
+    <Content Include="Views\Product\SolarRadio_6950.cshtml" />
+    <Content Include="Views\Product\WineOpenerDetails.cshtml" />
+    <Content Include="Views\Product\WineOpener_8010.cshtml" />
+    <Content Include="Views\Product\WineOpener_8020.cshtml" />
+    <Content Include="Views\Product\WineOpener_8030.cshtml" />
+    <Content Include="Views\Product\WineOpener_8040.cshtml" />
+    <Content Include="Views\Home\FAQ.cshtml" />
+    <Content Include="Views\Home\Manuals.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\ContactUs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\jquery.min.map" />
+    <Content Include="Scripts\jquery.slim.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56305</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56305/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

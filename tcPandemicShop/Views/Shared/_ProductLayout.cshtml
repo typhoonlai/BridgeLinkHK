@@ -1,0 +1,387 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Pandemic Shop</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <link href="/Content/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/Content/fontawesome.css">
+    <link rel="stylesheet" href="/Content/tooplate-main.css">
+    <link rel="stylesheet" href="/Content/owl.css">
+    <link rel="stylesheet" href="/Content/flex-slider.css">
+    <script src="~/Scripts/jquery.min.js"></script>
+</head>
+<body>
+    <div id="pre-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <span>您的一站式災難用品購買店</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Navigation-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="/images/companylogo.png" class="companylogo" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/Home/Index">
+                            主頁
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Product/CategoryList">產品</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/FAQ">常見問題</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/Manuals">操作手冊</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="cursor: pointer;" data-target='#modalAppointment' data-toggle="modal" class="nav-link">聯絡我們</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    @RenderBody()
+
+    <!--similar products starts here-->
+    <div class="featured-items">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <div class="line-dec"></div>
+                        <h1>你可能喜歡</h1>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="owl-carousel owl-theme owl-loaded owl-drag">
+
+
+
+
+
+
+
+
+
+                        <div class="owl-stage-outer">
+                            <div class="owl-stage" style="transform: translate3d(-1412px, 0px, 0px); transition: all 0s ease 0s; width: 5368px;">
+                                <div class="owl-item active" style="width: 262.5px; margin-right: 20px;">
+                                    <a href="/Product/DPS_3080">
+                                        <div class="featured-item">
+                                            <img src="~/images/Products/3080_01.jpg" alt="Item 5">
+                                            <h4>活著肩膀22</h4>
+                                            <h6>¥ 10,000</h6>
+                                        </div>
+                                    </a>
+                                </div><div class="owl-item" style="width: 262.5px; margin-right: 20px;">
+                                    <a href="/Product/DPS_3100">
+                                        <div class="featured-item">
+                                            <img src="~/images/Products/3100_01.jpg" alt="Item 5">
+                                            <h4>THE ISU PACKER 防災套裝</h4>
+                                            <h6>¥ 20,000</h6>
+                                        </div>
+                                    </a>
+                                </div><div class="owl-item" style="width: 262.5px; margin-right: 20px;">
+                                    <a href="/Product/DPS_3200">
+                                        <div class="featured-item">
+                                            <img src="~/images/Products/3200_01.jpg" alt="Item 5">
+                                            <h4>THE ISU PACKER 防災套裝DX</h4>
+                                            <h6>¥ 25,000</h6>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="owl-item" style="width: 262.5px; margin-right: 20px;">
+                                    <a href="/Product/DPS_3550">
+                                        <div class="featured-item">
+                                            <img src="~/images/Products/3550_01.jpg" alt="Item 5">
+                                            <h4>活著迷你護肩</h4>
+                                            <h6>¥ 5,000</h6>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="subscribe-form">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <div class="line-dec"></div>
+                        <h1>立即訂閱金燕通訊！</h1>
+                    </div>
+                </div>
+                <div class="col-md-8 offset-md-2">
+                    <div class="main-content">
+                        <p>接收有關所有災難用品的最新新聞，產品和信息更新</p>
+                        <div class="container">
+                            <form id="subscribe" action="" method="get">
+                                <div class="row" id="EmailSubscription">
+                                    <div class="col-md-7">
+                                        <fieldset>
+                                            <input name="email" type="text" class="form-control" id="email" onfocus="if(this.value == '您的電子郵件地址..') { this.value = ''; }" onblur="if(this.value == '') { this.value = '您的電子郵件地址...';}" value="您的電子郵件地址..." required="">
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <fieldset>
+                                            <button type="button" id="btnSubmit" class="button">現在訂閱！</button>
+                                        </fieldset>
+                                    </div>
+                                    <div id="ThankYouMsg" class="text-danger">
+                                        感謝您的訂閱！ 現在，您將收到金燕的新聞通訊。
+                                    </div>
+                                </div>
+                                </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="logo">
+                        <img src="/images/companylogo.png" class="companylogo" alt="">
+                    </div>
+                </div>
+                <!--div class="col-md-12">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">How It Works ?</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div-->
+              
+            </div>
+        </div>
+    </div>
+    <div class="sub-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="copyright-text">
+                        <p>
+                            ©金燕版權 2020
+
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @using (Html.BeginForm("Contact", "ContactUs", FormMethod.Post, new { onsubmit = "return SubmitContactUsForm(this)" }))
+
+    {
+        <div class="modal fade" id="modalAppointment" tabindex="-1" role="dialog" aria-labelledby="modalAppointmentLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalAppointmentLabel">聯絡我們</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="#">
+                            <div class="form-group">
+                                <label for="appointment_name" class="text-black">
+                                    你的名字
+                                </label>
+                                <input type="text" class="form-control" name="ContactName" id="ContactName">
+                                <span id="ErrContactName" style="color:#ff0000;font-size:large"></span>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="appointment_email" class="text-black">你的電子郵件地址</label>
+                                <input type="text" class="form-control" name="ContactEmail" id="ContactEmail">
+                                <span id="ErrContactEmail" style="color:#ff0000;font-size:large"></span>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="appointment_message" class="text-black">你的信息</label>
+                                <textarea id="ContactMessage" name="ContactMessage" class="form-control" cols="30" rows="10"></textarea>
+                                <span id="ErrContactMessage" style="color:#ff0000;font-size:large"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="OptIn" name="OptIn" checked><label for="OptIn"> <span style="font-size:smaller;padding-left:5px;vertical-align:middle"> 我同意收到金燕促銷信息和消息</span></label>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Send" id="btnContactUs" class="btn btn-primary">
+                                <input type="hidden" id="CurrentURL" />
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    }
+    <script src="/Scripts/jquery.min.js"></script>
+    <script src="/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="/Scripts/custom.js"></script>
+    <script src="/Scripts/owl.js"></script>
+    <script src="/Scripts/isotope.js"></script>
+    <script src="/Scripts/flex-slider.js"></script>
+    <script language="text/Javascript">
+        cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+        function clearField(t) {                   //declaring the array outside of the
+            if (!cleared[t.id]) {                      // function makes it static and global
+                cleared[t.id] = 1;  // you could use true and false, but that's more typing
+                t.value = '';         // with more chance of typos
+                t.style.color = '#fff';
+            }
+        }
+    </script>
+    <script>
+
+        $(document).ready(function () {
+            $('#ThankYouMsg').hide();
+            var current = location.pathname;
+            console.log("current url:" + current);
+            if (current != "/") {//if it is not the first page load, if it is home is already set to active by html
+
+                $('#navbarResponsive li a').each(function () {
+                    //  console.log("loop thru href:" + $this.attr('href').toString());
+                    var $this = $(this);
+                    // if the current path is like this link, make it active
+                    if ($this.attr('href').indexOf(current) !== -1) {
+
+                        $this.parent().addClass('active');
+                    } else {
+                        $this.parent().removeClass('active');
+                    }
+
+                });
+            }
+          
+            $('#btnSubmit').on('click', function (e) {
+
+                $("#EmailSubscription").hide("slow", function () {
+                    $("#ThankYouMsg").show("slow");
+                    // window.scrollTo(0, 500);
+                })
+
+            });
+
+
+        });
+        function SubmitContactUsForm(form) {
+            debugger;
+            // console.log("contact name" + $('#ContactName').val());
+            var ContactName = $('#ContactName').val();
+            var ContactEmail = $('#ContactEmail').val();
+            var ContactMessage = $('#ContactMessage').val();
+            var OptIn;
+            //  $.validator.unobtrusive.parse(form);
+            if ($('#ContactName').val() == "") {
+
+                // $('#ErrContactName').val("請填入你的名字");
+                $('#ErrContactName').html("*Please enter your name");
+                return false;
+            } else {
+                $('#ErrContactName').html("");
+            }
+            if ($('#ContactEmail').val() == "") {
+
+                // $('#ErrContactName').val("請填入你的電子郵件地址");
+                $('#ErrContactEmail').html("*Please enter your email");
+                return false;
+            } else {
+                $('#ErrContactEmail').html("");
+            }
+            if ($('#ContactMessage').val() == "") {
+
+                // $('#ErrContactMessage').val("請填入你的信息");
+                $('#ErrContactMessage').html("*Please enter your message");
+                return false;
+            } else {
+                $('#ErrContactMessage').html("");
+
+            }
+            // var getURL = window.location.href;
+            //$("#CurrentURL").val(getURL);
+            // document.getElementById('CurrentURL').value = window.location;
+
+            console.log('currenturl:' + document.getElementById('CurrentURL').value)
+            // if ($(form).valid()) {
+            //debugger;
+
+            if ($('#OptIn').is(":checked")) {
+                OptIn = true;
+            }
+            else {
+
+                OptIn = false;
+            }
+            var ContactUsModel = {
+
+                ContactName: $('#ContactName').val(),
+                ContactEmail: $('#ContactEmail').val(),
+                ContactMessage: $('#ContactMessage').val(),
+                CurrentURL: $(location).attr("href"),
+
+                OptIn: OptIn
+
+            }
+            $.ajax({
+                type: "POST",
+                url: form.action,
+                //data: $(form).serialize(),
+                data: ContactUsModel,
+                async: false,
+                success: function (data) {
+                    debugger;
+                    if (data.result) {
+                        // console.log("result: " + data.result)
+                        // alert('success: result' + result.d)
+                        //  window.location = "/Dashboard/Index";
+                        $('#modalAppointment').modal('hide');
+                        //dataTable.ajax.reload();
+
+                    }
+                    else {
+                        // console.log("result: " + data.result)
+                        // alert('failure: result' + result)
+                        //error check switched to server side
+                        //   $('#lblError').html('must at least 5 days prior to session date');
+                        // dataTable.ajax.reload();
+                        console.log("Error while process modify event form")
+                    }
+                }
+            });
+            //}
+            return false;
+        }
+    </script>
+</body>
+</html>

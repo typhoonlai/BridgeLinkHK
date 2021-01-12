@@ -1,0 +1,491 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Bridgelink International</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="/css/animate.css">
+
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="/css/flaticon.css">
+    <link rel="stylesheet" href="/css/style.css">
+    @RenderSection("head", false);
+   
+</head>
+<body>
+    <!-- Load Facebook SDK for JavaScript -->
+
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v8.0'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/zh_HK/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Your Chat Plugin code -->
+    <div class="fb-customerchat"
+         attribution=setup_tool
+         page_id="108865273938240"
+         theme_color="#7646ff"
+         logged_in_greeting=" 我們有什麼可以幫助你？ "
+         logged_out_greeting=" 我們有什麼可以幫助你？ ">
+    </div>
+    <div class="wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="bg-wrap">
+                        <div class="row">
+                            <div class="col-md-6 d-flex align-items-center">
+                                <p class="mb-0 phone pl-md-2">
+                                    <a href="tel:85231014978" class="mr-2"><span class="fa fa-phone mr-1"></span> (852) 3101 4978</a>
+                                    <a href="mailto:info@bridgelinkhk.com"><span class="fa fa-paper-plane mr-1"></span> info@bridgelinkhk.com</a>
+                                </p>
+                            </div>
+                            <div class="col-md-6 d-flex justify-content-md-end">
+                                <div class="social-media">
+                                    <p class="mb-0 d-flex">
+                                        <a href="https://www.facebook.com/%E5%8D%9A%E7%BF%B9%E5%9C%8B%E9%9A%9B%E7%A7%BB%E6%B0%91%E5%8F%8A%E5%8D%87%E5%AD%B8-108865273938240" target="_blank" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+                                        <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
+                                        <a target="_blank" href="https://instagram.com/bridgelinkhk?idshid=wlh9mbnl044k" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+                                        <a target="_blank" href="https://api.whatsapp.com/send?phone=85267998870" class="d-flex align-items-center justify-content-center"><span class="fa fa-whatsapp"><i class="sr-only">Whatsapp</i></span></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="/Home/Main"><img src="~/img/brigelinklogo.png" width="262" height="78" /></a>
+
+
+
+
+
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item"><a href="/Home/Main" class="nav-link">主頁</a></li>
+                    <li class="nav-item"><a href="/Home/WhyCanada" class="nav-link">為何選擇加拿大</a></li>
+
+                    <!--li class="nav-item dropdown">
+        <a href="cases.html" class="nav-link dropdown-toggle" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Case Study</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown05">
+            <a class="dropdown-item" href="/Home/SPSchoolCompare">學制比較</a>
+            <a class="dropdown-item" href="/Home/SPSchools">學校</a>
+        </div>
+
+    </li-->
+                    <li class="nav-item"><a href="/Home/CanadaIntro" class="nav-link">加拿大移民</a></li>
+                    <li class="nav-item"><a href="/Home/CanadaEducation" class="nav-link">加拿大升學</a></li>
+                    <li class="nav-item"><a style="cursor: pointer;" data-target='#modalAppointment' data-toggle="modal" class="nav-link">聯絡我們</a></li>
+                    <li class="nav-item"><a href="http://sc.bridgelinkca.com/home/main" class="nav-link">切换简体中文</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    @RenderBody()
+    <div style="clear:both" />
+    <footer class="footer">
+        <div class="container-fluid px-lg-5">
+            <div class="row">
+                <div class="col-md-9 py-5">
+                    <div class="row">
+                        <div class="col-md-4 mb-md-0 mb-4 ftco-animate">
+                            <h2 class="footer-heading">博翹國際</h2>
+                            <p>一直致力提供一條移民、升學及海外房地產服務，本所之專業團隊確保申辦流程快捷並有效。本所總部設於香港，並於加拿大、新加坡及深圳設有分公司。 秉承著「誠信、穩健、保密、專業」的宗旨，多年來用心為位客戶提供卓越服務。</p>
+                            <ul class="ftco-footer-social p-0">
+                                <li class="ftco-animate"><a href="https://api.whatsapp.com/send?phone=85267998870" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter"><span class="fa fa-whatsapp"></span></a></li>
+                                <li class="ftco-animate"><a href="https://www.facebook.com/%E5%8D%9A%E7%BF%B9%E5%9C%8B%E9%9A%9B%E7%A7%BB%E6%B0%91%E5%8F%8A%E5%8D%87%E5%AD%B8-108865273938240" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook"><span class="fa fa-facebook"></span></a></li>
+                                <li class="ftco-animate"><a href="https://instagram.com/bridgelinkhk?idshid=wlh9mbnl044k" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram"><span class="fa fa-instagram"></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="row justify-content-center">
+                                <div class="col-md-12 col-lg-10">
+                                    <div class="row">
+                                        <div class="col-md-12 mb-md-0 mb-4 ftco-animate">
+                                            <h2 class="footer-heading">
+                                                聯絡我們
+                                            </h2>
+                                            <table class="text-white">
+                                                <tr>
+                                                    <td>聯絡電話：</td>
+                                                    <td>(852) 3101 4978</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>商務溝通：</td>
+                                                    <td><a href="mailto:info@bridgelinkhk.com">info@bridgelinkhk.com</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>服務時間：</td>
+                                                    <td>09：00 – 18：00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>公司地址：</td>
+                                                    <td>九龍尖沙咀海港城海洋中心11樓1112A室</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>新加坡分公司地址：</td>
+                                                    <td>60 Paya Lebar Road #11-27,<br/>Paya Lebar Square, Singapore<br/> 490051</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>加拿大分公司地址：</td>
+                                                    <td>
+                                                        1108 - 250 Consumers Road#162<br />
+                                                        North York, ON M2J 4V6
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-md-5">
+                        <div class="col-md-12">
+                            <p class="copyright">
+
+                                Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved | Bridgelink International
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 py-md-5 py-4 aside-stretch-right pl-lg-5">
+                    @using (Html.BeginForm("Contact", "ContactUs", FormMethod.Post, new { onsubmit = "return SubmitContactUsFormFooter(this)" }))
+
+                    {
+                        <div id="ContactUsFormFooter">
+                            <h2 class="footer-heading">免費諮詢</h2>
+
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="ContactNameFooter" id="ContactNameFooter" placeholder="您的名字">
+                                <span id="ErrContactNameFooter" style="color:#ff0000;font-size:large"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="ContactEmailFooter" id="ContactEmailFooter" placeholder="電子郵件地址">
+                                <span id="ErrContactEmailFooter" style="color:#ff0000;font-size:large"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea id="ContactMessageFooter" name="ContactMessageFooter" class="form-control" cols="30" rows="6" placeholder="您的訊息"></textarea>
+                                <span id="ErrContactMessageFooter" style="color:#ff0000;font-size:large"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="OptInFooter" name="OptInFooter" checked><label for="OptIn"> <span style="font-size:smaller;padding-left:5px;vertical-align:middle">我同意接受博翹國際發送的新聞通訊和新聞訊息</span></label>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="發送信息" id="btnContactUsFooter" class="btn btn-primary">
+                                <!--button type="submit" class="form-control submit px-3">Send A Message</!--button-->
+                            </div>
+                        </div>
+
+                    }
+                    <div id="SystemMsgFooter" style="color:red;">謝謝您的留言，我們會盡快派專人與您聯絡!</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--end of footer-->
+    <!-- Modals -->
+    @using (Html.BeginForm("Contact", "ContactUs", FormMethod.Post, new { onsubmit = "return SubmitContactUsForm(this)" }))
+
+    {
+        <div class="modal fade" id="modalAppointment" tabindex="-1" role="dialog" aria-labelledby="modalAppointmentLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalAppointmentLabel">聯絡我們</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="#">
+                            <div class="form-group">
+                                <label for="appointment_name" class="text-black">
+                                    您的名字
+                                </label>
+                                <input type="text" class="form-control" name="ContactName" id="ContactName">
+                                <span id="ErrContactName" style="color:#ff0000;font-size:large"></span>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="appointment_email" class="text-black">電子郵件地址</label>
+                                <input type="text" class="form-control" name="ContactEmail" id="ContactEmail">
+                                <span id="ErrContactEmail" style="color:#ff0000;font-size:large"></span>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="appointment_message" class="text-black">您的訊息</label>
+                                <textarea id="ContactMessage" name="ContactMessage" class="form-control" cols="30" rows="10"></textarea>
+                                <span id="ErrContactMessage" style="color:#ff0000;font-size:large"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="OptIn" name="OptIn" checked><label for="OptIn"> <span style="font-size:smaller;padding-left:5px;vertical-align:middle">我同意接受博翹國際發送的新聞通訊和新聞訊息</span></label>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="發送信息" id="btnContactUs" class="btn btn-primary">
+                                <input type="hidden" id="CurrentURL" />
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    }
+    <!--end of module-->
+
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.easing.1.3.js"></script>
+    <script src="/js/jquery.waypoints.min.js"></script>
+    <script src="/js/jquery.stellar.min.js"></script>
+    <script src="/js/jquery.animateNumber.min.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/jquery.magnific-popup.min.js"></script>
+    <script src="/js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="/js/google-map.js"></script>
+    <script src="/js/main.js"></script>
+    <script>
+
+        //set navigation base on user click
+        $(document).ready(function () {
+            $(function () {
+                $("#SystemMsgFooter").hide();
+                var current = location.pathname;
+                console.log("current url:" + current);
+                $('#ftco-navbar li a').each(function () {
+                    //  console.log("loop thru href:" + $this.attr('href').toString());
+                    var $this = $(this);
+                    // if the current path is like this link, make it active
+                    if ($this.attr('href').indexOf(current) !== -1) {
+
+                        $this.parent().addClass('active');
+                    }
+
+                });
+            })
+        });
+        function SubmitContactUsForm(form) {
+            debugger;
+            // console.log("contact name" + $('#ContactName').val());
+            var ContactName = $('#ContactName').val();
+            var ContactEmail = $('#ContactEmail').val();
+            var ContactMessage = $('#ContactMessage').val();
+            var OptIn;
+            //  $.validator.unobtrusive.parse(form);
+            if ($('#ContactName').val() == "") {
+
+                // $('#ErrContactName').val("請填入你的名字");
+                $('#ErrContactName').html("*請填入你的名字");
+                return false;
+            } else {
+                $('#ErrContactName').html("");
+            }
+            if ($('#ContactEmail').val() == "") {
+
+                // $('#ErrContactName').val("請填入你的電子郵件地址");
+                $('#ErrContactEmail').html("*請填入你的電子郵件地址");
+                return false;
+            } else {
+                $('#ErrContactEmail').html("");
+            }
+            if ($('#ContactMessage').val() == "") {
+
+                // $('#ErrContactMessage').val("請填入你的信息");
+                $('#ErrContactMessage').html("*請填入你的信息");
+                return false;
+            } else {
+                $('#ErrContactMessage').html("");
+
+            }
+            // var getURL = window.location.href;
+            //$("#CurrentURL").val(getURL);
+            // document.getElementById('CurrentURL').value = window.location;
+
+            console.log('currenturl:' + document.getElementById('CurrentURL').value)
+            // if ($(form).valid()) {
+            //debugger;
+
+            if ($('#OptIn').is(":checked")) {
+                OptIn = true;
+            }
+            else {
+
+                OptIn = false;
+            }
+            var ContactUsModel = {
+
+                ContactName: $('#ContactName').val(),
+                ContactEmail: $('#ContactEmail').val(),
+                ContactMessage: $('#ContactMessage').val(),
+                CurrentURL: $(location).attr("href"),
+
+                OptIn: OptIn
+
+            }
+            $.ajax({
+                type: "POST",
+                url: form.action,
+                //data: $(form).serialize(),
+                data: ContactUsModel,
+                async: false,
+                success: function (data) {
+                    debugger;
+                    if (data.result) {
+                        // console.log("result: " + data.result)
+                        // alert('success: result' + result.d)
+                        //  window.location = "/Dashboard/Index";
+                        $('#modalAppointment').modal('hide');
+                        //dataTable.ajax.reload();
+
+                    }
+                    else {
+                        // console.log("result: " + data.result)
+                        // alert('failure: result' + result)
+                        //error check switched to server side
+                        //   $('#lblError').html('must at least 5 days prior to session date');
+                        // dataTable.ajax.reload();
+                        console.log("Error while process modify event form")
+                    }
+                }
+            });
+            //}
+            return false;
+        }
+        function SubmitContactUsFormFooter(form) {
+            debugger;
+            // console.log("contact name" + $('#ContactName').val());
+            var ContactName = $('#ContactNameFooter').val();
+            var ContactEmail = $('#ContactEmailFooter').val();
+            var ContactMessage = $('#ContactMessageFooter').val();
+            var OptIn;
+            //  $.validator.unobtrusive.parse(form);
+            if ($('#ContactNameFooter').val() == "") {
+
+                // $('#ErrContactName').val("請填入你的名字");
+                $('#ErrContactNameFooter').html("*請填入你的名字");
+                return false;
+            } else {
+                $('#ErrContactNameFooter').html("");
+            }
+            if ($('#ContactEmailFooter').val() == "") {
+
+                // $('#ErrContactName').val("請填入你的電子郵件地址");
+                $('#ErrContactEmailFooter').html("*請填入你的電子郵件地址");
+                return false;
+            } else {
+                $('#ErrContactEmailFooter').html("");
+            }
+            if ($('#ContactMessageFooter').val() == "") {
+
+                // $('#ErrContactMessage').val("請填入你的信息");
+                $('#ErrContactMessageFooter').html("*請填入你的信息");
+                return false;
+            } else {
+                $('#ErrContactMessageFooter').html("");
+
+            }
+            // var getURL = window.location.href;
+            //$("#CurrentURL").val(getURL);
+            // document.getElementById('CurrentURL').value = window.location;
+
+            console.log('currenturl:' + document.getElementById('CurrentURL').value)
+            // if ($(form).valid()) {
+            //debugger;
+
+            if ($('#OptInFooter').is(":checked")) {
+                OptIn = true;
+            }
+            else {
+
+                OptIn = false;
+            }
+            var ContactUsModel = {
+
+                ContactName: $('#ContactNameFooter').val(),
+                ContactEmail: $('#ContactEmailFooter').val(),
+                ContactMessage: $('#ContactMessageFooter').val(),
+                CurrentURL: $(location).attr("href"),
+
+                OptIn: OptIn
+
+            }
+            $.ajax({
+                type: "POST",
+                url: form.action,
+                //data: $(form).serialize(),
+                data: ContactUsModel,
+                async: false,
+                success: function (data) {
+                    debugger;
+                    if (data.result) {
+                        // console.log("result: " + data.result)
+                        // alert('success: result' + result.d)
+                        //  window.location = "/Dashboard/Index";
+                       // $('#modalAppointment').modal('hide');
+                        //dataTable.ajax.reload();
+                        //show the we got your message blurb AFTER using submitted the contactus message, callback
+                        $("#ContactUsFormFooter").hide("slow", function () {
+                            $("#SystemMsgFooter").show("slow");
+                        })
+
+                    }
+                    else {
+                        // console.log("result: " + data.result)
+                        // alert('failure: result' + result)
+                        //error check switched to server side
+                        //   $('#lblError').html('must at least 5 days prior to session date');
+                        // dataTable.ajax.reload();
+                        console.log("Error while process modify event form")
+                    }
+                }
+            });
+            //}
+            return false;
+        }
+
+    </script>
+</body>
+</html>

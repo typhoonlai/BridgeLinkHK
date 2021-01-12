@@ -1,0 +1,427 @@
+﻿
+@{
+    ViewBag.Title = "FAQ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    /* Style the buttons that are used to open and close the accordion panel */
+    .accordion {
+        background-color: #ffffff;
+        color: #000 !important;
+        font-weight: 600;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+        border-radius: 20px;
+        box-shadow: 0px 2px 8px -4px rgba(0, 0, 0, 0.21) !important;
+        margin:10px 20px;
+    }
+
+    .button {
+        outline: none;
+    }
+
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .accordion .active, .accordion:hover {
+        background-color: #1ba12d;
+        color: #fff !important;
+    }
+
+    /* Style the accordion panel. Note: hidden by default */
+    .panel {
+        padding: 10px 18px;
+        background-color: white;
+        display: none;
+        overflow: hidden;
+        margin:0px 20px;
+    }
+    #wrapper{
+        width:70%;
+        margin:0 auto;
+    }
+    /*
+    .accordion {
+        background-color: #fff;
+        color: #000 !important;
+        font-weight: 600;
+        cursor: pointer;
+        text-transform: capitalize;
+      margin-bottom: 10px;
+        box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.21) !important;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+
+        transition: 0.4s;
+        border-radius: 40px;
+    }
+
+        .active, .accordion:hover {
+            background-color: #1ba12d;
+            color: #000 !important;
+        }
+
+    .panel {
+        padding: 0 18px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+    */
+    .line-dec {
+        width: 30px;
+        height: 5px;
+        background-color: #3a8bcd;
+    }
+</style>
+
+<div id="wrapper">
+    <div class="section-heading">
+        <div class="line-dec"></div>
+        <h1>常見問題解答</h1>
+    </div>
+  
+
+    <button class="accordion active">你在用什麼作為光源？</button>
+    <div class="panel">
+        <p>
+            使用LED燈。其他地方的LED（發光二極管）請參考。
+
+            目標產品: 4505, 4501, 5599, 5600, 5605, 5800, 5818, 5833, 5908, 5963, 5990, 5992, 6000, 6221, 6250, 6255, 6330, 6440, 6451, 6452, 6740, 6750, 6990, 7100 , FL-350, 6495
+        </p>
+    </div>
+
+    <button class="accordion active">LED燈有多亮?</button>
+    <div class="panel">
+        <p>一個LED的亮度為10,000 mcd（millicandera）</p>
+    </div>
+
+    <button class="accordion">是否可以更換LED燈？</button>
+    <div class="panel">
+        <p>
+            LED不是燈泡。無法交換。
+
+            LED燈泡的壽命約為50,000小時。
+            目標產品：帶LED燈的型號
+        </p>
+    </div>
+
+    <button class="accordion">LED燈籠多少流明？</button>
+    <div class="panel">
+        <p>
+            6220 LED燈籠3…16流明<br/>
+            6250 遠程LED燈籠12…60流明<br />
+            6255 遠程防滴漏燈籠…強21流明弱5.59流明<br />
+        </p>
+    </div>
+
+
+    <button class="accordion">你能聽收音機嗎?</button>
+    <div class="panel">
+        <p>
+            配備收音機的型號可以做到這一點。
+
+            您可以收聽AM廣播（540至1600KHz）和FM廣播（76至90MHz）。（4501僅是AM收音機的產品。）
+        </p>
+    </div>
+
+
+    <button class="accordion">很難打開收音機。</button>
+    <div class="panel">
+        <p>
+            在無線電波難以到達的地方（例如山區），很難打開無線電。此外，將很難進入市區，建築物內部，地下街道等。
+        </p>
+    </div>
+
+    <button class="accordion">警報器的響度和蜂鳴聲</button>
+    <div class="panel">
+        <p>
+            無線電燈產品：平均90 dB（分貝）<br/>
+            安全蜂鳴器產品：平均105 dB（分貝）
+        </p>
+    </div>
+
+
+    <button class="accordion">是否可以更換冷陰極管熒光燈?</button>
+    <div class="panel">
+        <p>
+            冷陰極管熒光燈是固定型的。無法交換。
+
+            熒光燈的壽命約為10,000小時。
+            目標產品：5600
+        </p>
+    </div>
+
+
+    <button class="accordion">有哪些配件？（手機充電功能產品）</button>
+    <div class="panel">
+        <p>
+            配件：手機充電線
+            4種連接器
+            <ul>
+                <li>綠色標籤...用於智能手機（微型USB端子）</li>
+                <li>FOMA，Softbank 3G的藍色標籤.</li>
+                <li> 橙色標籤...用於au</li>
+                <li>白色連接器...用於iPhone 4 / 4S</li>
+                <li> 肩帶（5600，5990）</li>
+                <li>錶帶（5818，6451，6452）</li>
+                <li> 耳機（6452，6453）</li>
+            </ul>
+        </p>
+    </div>
+
+
+    <button class="accordion">您有防水或防滴水的產品嗎？</button>
+    <div class="panel">
+        <p>
+            5818、6221、6250、6255是防滴產品。
+            （它不是完全防水的，請不要放在水中）
+        </p>
+    </div>
+
+
+    <button class="accordion">Compatible手機的兼容型號（關於兼容型號）</button>
+    <div class="panel">
+        <p>
+            與PHS以外的其他日本手機兼容，包括4種類型的連接器：micro USB端子方法（智能電話），Dock連接器（iphone 4 / 4S），CDMA方法（AU），FOMA類型（FOMA，Softbank3G）。
+            <ul>
+                <li>它與市場上的大多數手機兼容，但請注意，某些型號可能不可用。</li>
+                <li>在國外製造的某些型號可能不兼容，因為它們沒有上述四種類型的連接器形狀。</li>
+                <li>在某些情況下，充電開始後可能會被警告或要求您立即停止充電。在這種情況下，請立即停止充電。</li>
+                <li>如果您無法給電池充電，請與我們聯繫。</li>
+            </ul>
+
+
+
+
+        </p>
+    </div>
+
+
+    <button class="accordion">哪些產品配備了Dynamo手柄？</button>
+    <div class="panel">
+        <p>
+            兼容的產品：<br />
+            移動充電式）5600、5605、5818、5833、5908、5963、5990、6000、6990、7100
+            （僅LED燈）6330、6740
+        </p>
+    </div>
+
+
+    <button class="accordion">可以通過Dynamo充電為手機充滿電嗎？</button>
+    <div class="panel">
+        <p>
+            本產品的手機充電功能僅是緊急疏散措施，因此不假定通過手搖發電機充電將手機電池充滿電。
+        </p>
+    </div>
+
+
+    <button class="accordion">插入式手機充電功能是什麼?</button>
+    <div class="panel">
+        <p>
+            使用常規的Dynamo手機充電功能，僅在轉動Dynamo手柄時才能對其進行充電。但是，通過插入式手機充電功能，可以通過簡單地將附帶的專用電纜與乾電池（5605、6451、6452）或太陽能電池（5605、6451、7100）的預充電電源連接來為手機充電。它是。也可以使用來自個人計算機或家用電源的預充電電源。（5605、6451、7100）
+</div>
+
+
+    <button class="accordion">可以給iPhone 5或更高版本充電嗎？</button>
+    <div class="panel">
+        <p>
+            如果您使用正版Apple電纜作為插入式移動充電功能類型，則是可能的。（僅限5605、6125、6451、6452、7100）6990、6000、5833、5818、5963、5990、5908具有可選的連接器。
+        </p>
+    </div>
+
+
+    <button class="accordion">是否有可用於太陽能充電的產品？</button>
+    <div class="panel">
+        <p>
+            兼容的產品：提供5600、5605、6000、6450、6451、6470、6740、6750、7100。
+        </p>
+    </div>
+
+
+    <button class="accordion">可以使用太陽能電池為手機充電嗎？</button>
+    <div class="panel">
+        <p>
+            不能。（僅在Dynamo手柄旋轉時才可以對手機充電。）
+            *對於插入式，可以在長時間進行太陽能充電後為各公司的手機充電。*有關詳細信息，請參見使用說明書。
+        </p>
+    </div>
+
+
+    <button class="accordion">即使陽光透過車窗玻璃充電，它也會充電嗎?</button>
+    <div class="panel">
+        <p>
+            充電效果遠比直射陽光弱。
+        </p>
+    </div>
+
+
+    <button class="accordion">我可以用乾電池為手機充電嗎？</button>
+    <div class="panel">
+        <p>
+            不能。（僅當Dynamo手柄旋轉時才可以為手機充電。）
+            *可以使用鹼性乾電池為插入式電池充電。（5605、6451、6452、6125）
+        </p>
+    </div>
+
+
+    <button class="accordion">旋轉Dynamo手柄的指導原則是什麼?</button>
+    <div class="panel">
+        <p>
+            每分鐘大約旋轉120轉作為指導。
+        </p>
+    </div>
+
+
+    <button class="accordion">使用Dynamo手柄可以為產品充滿電嗎？</button>
+    <div class="panel">
+        <p>
+            不假定完全充電，因為它僅用於緊急情況。如果嘗試將其充滿電，則以每分鐘120轉的速度旋轉手柄約3至6個小時，它將充滿電。（這只是一個指南。取決於產品。）
+        </p>
+    </div>
+
+
+    <button class="accordion">可以用本產品給諸如鎳氫電池之類的二次電池充電嗎？</button>
+    <div class="panel">
+        <p>
+            不能。（Dynamo產生的所有電能都存儲在內部可充電電池中。）
+        </p>
+    </div>
+
+
+    <button class="accordion">用太陽能電池對內部電源充滿電需要多長時間？</button>
+    <div class="panel">
+        <p>
+            大約需要10個小時。（取決於季節和日照量。取決於產品。）
+        </p>
+    </div>
+
+
+    <button class="accordion">
+        充電電池的壽命是多長？
+    </button>
+    <div class="panel">
+        <p>
+            假設如果使用Dynamo充電將工作從空充電到完全充電的旋轉（旋轉）重複大約500次，則將達到使用壽命。
+        </p>
+    </div>
+
+
+    <button class="accordion">不適用於乾電池（無法使用）。</button>
+    <div class="panel">
+        <p>
+            <ol>
+                <li> 乾電池的正負設置是否正確?</li>
+                <li> 在使用新的干電池之前，是否已取下乾電池保護包?</li>
+                <li> 您使用的是舊電池還是新電池?</li>
+
+            </ol>
+
+
+
+        </p>
+    </div>
+
+
+    <button class="accordion">大量消耗電池</button>
+    <div class="panel">
+        <p>
+            收音機和音量轉盤的電源開/關將使收音機開關加倍。轉動收音機開關，直到聽到轉盤發出咔嗒聲，收音機將打開。如果您已收聽完廣播並向後轉動撥盤以調低音量，則電源將不會關閉。在這種狀態下，電源保持打開狀態，乾電池更快地耗盡電量。確保返回開關，直到它發出喀噠聲。
+
+        </p>
+    </div>
+
+
+    <button class="accordion">您有交流/直流適配器嗎?</button>
+    <div class="panel">
+        <p>
+            我們有3種類型。
+            <ol>
+                <li>
+                    A型（5829）…DC4.5V，300mA
+                    兼容型號…5600，5963，5990，6000
+                </li>
+                <li>
+                    B型（5831）...
+                    兼容DC3V，300mA的型號... 5818、5908
+                </li>
+                <li>
+                    AC / USB適配器（5848）…DC5V，500mA
+                    兼容型號…5605、6451、7100
+                </li>
+            </ol>
+
+
+
+        </p>
+    </div>
+
+</div><!--end of wrapper-->
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+
+            }
+        });
+    }
+</script>
+<!--
+<button class="accordion active">What are you using for the lights? </button>
+<div class="panel">
+    <p>
+        I am using an LED light. Elsewhere the LED (light emitting diode) Please refer to.
+
+        Target products: 4505, 4501, 5599, 5600, 5605, 5800, 5818, 5833, 5908, 5963, 5990, 5992, 6000, 6221, 6250, 6255, 6330, 6440, 6451, 6452, 6740, 6750, 6990, 7100 , FL-350, 6495
+    </p>
+</div>
+
+<button class="accordion">How bright is the LED light?</button>
+<div class="panel">
+    <p>The brightness of one LED light is 10,000 mcd (millicandela).</p>
+</div>
+
+<button class="accordion">Is it possible to replace the LED light?</button>
+<div class="panel">
+    <p>
+        LEDs are not light bulbs. It cannot be exchanged.
+
+        The life of the LED bulb is about 50,000 hours.
+        Target product: LED light equipped model
+    </p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+</script>
+    -->

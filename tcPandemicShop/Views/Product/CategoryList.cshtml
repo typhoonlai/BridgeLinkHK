@@ -1,0 +1,196 @@
+﻿
+@{
+    ViewBag.Title = "CategoryList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+
+    .CategoryImage{
+
+        width:308px;
+        height:233px;
+    }
+</style>
+<div class="featured-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-12">
+                <div class="section-heading">
+                    <div class="line-dec"></div>
+                    <h1>精選產品</h1>
+                </div>
+            </div>
+            <div class="col-md-8 col-sm-12">
+                <div id="filters" class="button-group">
+                    <button class="btn btn-primary" data-filter="*">所有產品</button>
+                    <!--button class="btn btn-primary" data-filter=".new">Newest</!--button>
+                    <button class="btn btn-primary" data-filter=".low">Low Price</button>
+                    <button class="btn btn-primary" data-filter=".high">Hight Price</button-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="divPage1">
+    <div class="featured container no-gutter">
+
+        <div class="row posts isotope" style="position: relative; overflow: hidden; height: 1097.75px;">
+            <div id="1" class="item new col-md-4 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 0px);">
+                <a href="/Product/BagDetails">
+                    <div class="featured-item">
+                        <img src="~/images/Categories/bag.png" class="CategoryImage" alt="">
+                        <br /><br /><h6>袋 (2)</h6>
+
+                    </div>
+                </a>
+            </div>
+            <div id="2" class="item high col-md-4 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate(380px, 0px);">
+                <a href="/Product/RadioClockDetails">
+                    <div class="featured-item">
+                        <img src="~/images/Categories/clock.png" alt="" class="CategoryImage">
+                        <br /><br /><h6>無線電鐘 (3)</h6>
+
+                    </div>
+                </a>
+            </div>
+            <div id="3" class="item low col-md-4 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate(760px, 0px);">
+                <a href="/Product/DiffuserDetails">
+                    <div class="featured-item">
+                        <img src="~/images/Categories/diffuser.png" alt="" class="CategoryImage">
+                        <br /><br /><h6>擴散器 (5)</h6>
+
+                    </div>
+                </a>
+            </div>
+            <div id="4" class="item low col-md-4 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 366px);">
+                <a href="/Product/DPSDetails">
+                    <div class="featured-item">
+                        <img src="~/images/Categories/DisasterSet.png" alt="" class="CategoryImage">
+                        <br /><br /><h6>防災套裝 (8)</h6>
+
+                    </div>
+                </a>
+            </div>
+            <div id="5" class="item new high col-md-4 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate(380px, 366px);">
+                <a href="/Product/OutdoorLanternDetails">
+                    <div class="featured-item">
+                        <img src="~/images/Categories/Lantern.png" alt="" class="CategoryImage">
+                        <br /><br /><h6>戶外燈籠 (4)</h6>
+
+                    </div>
+                </a>
+            </div>
+            <div id="6" class="item new col-md-4 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate(760px, 366px);">
+                <a href="/Product/LEDDetails">
+                    <div class="featured-item">
+                        <img src="~/images/Categories/LedLight.png" alt="" class="CategoryImage">
+                        <br /><br /><h6>LED燈 (5)</h6>
+
+                    </div>
+                </a>
+            </div>
+            <div id="7" class="item new high col-md-4 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 732px);">
+                <a href="/Product/MobileDetails">
+                    <div class="featured-item">
+                        <img src="~/images/Categories/mobile.png" alt="" class="CategoryImage">
+                        <br /><br /><h6>移動電話設備 (2)</h6>
+
+                    </div>
+                </a>
+            </div>
+            <div id="8" class="item low new col-md-4 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate(380px, 732px);">
+                <a href="/Product/MotionSensorDetails">
+                    <div class="featured-item">
+                        <img src="~/images/Categories/MotionSensor.png" alt="" class="CategoryImage">
+                        <br /><br /><h6>人體感應器/燈光 (2)</h6>
+
+                    </div>
+                </a>
+            </div>
+            <div id="9" class="item new col-md-4 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate(760px, 732px);">
+                <a href="/Product/WineOpenerDetails">
+                    <div class="featured-item">
+                        <img src="~/images/Categories/WineOpener.png" alt="" class="CategoryImage">
+                        <br /><br /><h6>紅酒開瓶器 (4)</h6>
+
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <div class="page-navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul>
+                        <li class="current-page"><a id="btnPage1" href="#">1</a></li>
+                        <li><a id="btnPage2">2</a></li>
+
+                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="divPage2">
+    <div class="featured container no-gutter">
+
+        <div class="row posts isotope" style="position: relative; overflow: hidden; height: 1097.75px;">
+            <div id="1" class="item new col-md-4 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 0px);">
+                <a href="/Product/RadioLightDetails">
+                    <div class="featured-item">
+                        <img src="~/images/Categories/RadioLight.png" class="CategoryImage" alt="">
+                        <br /><br /><h6>無線電燈 (8)</h6>
+
+                    </div>
+                </a>
+            </div>
+            <div id="2" class="item high col-md-4 isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate(380px, 0px);">
+                <a href="/Product/SolarRadioDetails">
+                    <div class="featured-item">
+                        <img src="~/images/Categories/SolarRadio.png" alt="" class="CategoryImage">
+                        <br /><br /><h6>收音機/太陽能收音機 (8)</h6>
+
+                    </div>
+                </a>
+            </div>
+           
+        </div>
+
+    </div>
+    <div class="page-navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul>
+                        <li ><a id="btnPage2_1">1</a></li>
+                        <li class="current-page"><a href="#">2</a></li>
+
+                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+        $(document).ready(function () {
+            $("#divPage2").hide();
+            $('#btnPage2').on('click', function (e) {
+
+                $("#divPage1").hide("slow", function () {
+                    $("#divPage2").show("slow");
+                    window.scrollTo(0, 100);
+                })
+            });
+            $('#btnPage2_1').on('click', function (e) {
+
+                $("#divPage2").hide("slow", function () {
+                    $("#divPage1").show("slow");
+                    window.scrollTo(0, 100);
+                })
+            });
+        });
+    </script>

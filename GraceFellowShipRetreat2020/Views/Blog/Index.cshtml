@@ -1,0 +1,59 @@
+﻿@using GraceFellowShipRetreat2020.Models;
+@model List<Article>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div clss="container" style="height:600px;background-image: url('/img/blogheader.jpg');background-repeat: no-repeat;background-size:cover;background-attachment: fixed;background-size: 100%">
+
+    <div class="row" style="">
+        <div class="col-md-7 col-sm-12 element-animate fadeInUp element-animated" style="padding:10%;width:700px;">
+            <!--div class="PageTitle" style="width:500px">Blog</div-->
+
+        </div>
+    </div>
+</div>
+<div class="container">
+
+    @foreach (var element in Model)
+    {
+
+        <div class="row my-6" style="border-bottom:1px solid #f4f4f4;margin: 50px  10px">
+            <div class="col-md-2  element-animate fadeInUp element-animated">
+                <div style="background-color:#48c7ec;height:64px;width:64px;line-height:20px;color:#fff;">
+                    @Html.DisplayFor(m => element.CreatedDay)<br />
+                    @Html.DisplayFor(m => element.CreatedMonth)
+                </div>
+            </div>
+
+            <div class="col-md-6  element-animate fadeInUp element-animated">
+                <div class="box7">
+                    <img src="~/img/blog/@element.ImageLarge" class="img-responsive" alt="" width="790" height="420" />
+                    <div class="box-content">
+                        <span class="post">詳情請按鏈結</span>
+                        <ul class="icon">
+                            <li><a href="#" class="fa fa-link"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <p>@element.Title</p>
+                    <div style="line-height:10px">by admin</div>
+                    <div style="font-size:16px;color:#848484;line-height:26px;font-weight:300;">
+                    @Html.Raw(@element.Summary)
+                    </div>
+                    <div>
+
+                        <a role="button" class="btn btn-outline-info" style="margin-bottom:15px" href="/blog/Details/?id=@element.ID">READ MORE</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    }
+
+</div>
+

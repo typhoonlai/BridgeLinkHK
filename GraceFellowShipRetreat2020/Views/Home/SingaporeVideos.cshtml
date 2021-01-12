@@ -1,0 +1,139 @@
+﻿@{
+    Layout = "_EmptyLayout.cshtml";
+}
+<style>
+    
+    .share-btn-wrp {
+        list-style: none;
+        display: block;
+        margin: 0px;
+        padding: 0px;
+        width: 32px;
+        left: 0px;
+        
+        position: fixed;
+    }
+        .share-btn-wrp .button-wrap {
+            text-indent: -100000px;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            transition: width 0.1s ease-in-out;
+        }
+        .share-btn-wrp > .facebook {
+            background: url(/img/share-icons.png) no-repeat -42px 0px;
+        }
+
+            .share-btn-wrp > .facebook:hover {
+                background: url(/img/share-icons.png) no-repeat -4px -0px;
+                width: 38px;
+            }
+
+        .share-btn-wrp > .twitter {
+            background: url(/img/share-icons.png) no-repeat -42px -34px;
+        }
+
+            .share-btn-wrp > .twitter:hover {
+                background: url(/img/share-icons.png) no-repeat -4px -34px;
+                width: 38px;
+            }
+
+        .share-btn-wrp > .digg {
+            background: url(/img/share-icons.png) no-repeat -42px -68px;
+        }
+
+            .share-btn-wrp > .digg:hover {
+                background: url(/img/share-icons.png) no-repeat -4px -68px;
+                width: 38px;
+            }
+
+        .share-btn-wrp > .stumbleupon {
+            background: url(/img/share-icons.png) no-repeat -42px -102px;
+        }
+
+            .share-btn-wrp > .stumbleupon:hover {
+                background: url(/img/share-icons.png) no-repeat -4px -102px;
+                width: 38px;
+            }
+
+        .share-btn-wrp > .delicious {
+            background: url(/img/share-icons.png) no-repeat -42px -136px;
+        }
+
+            .share-btn-wrp > .delicious:hover {
+                background: url(/img/share-icons.png) no-repeat -4px -136px;
+                width: 38px;
+            }
+
+        .share-btn-wrp > .gplus {
+            background: url(/img/share-icons.png) no-repeat -42px -170px;
+        }
+
+            .share-btn-wrp > .gplus:hover {
+                background: url(/img/share-icons.png) no-repeat -4px -170px;
+                width: 38px;
+            }
+
+        .share-btn-wrp > .email {
+            background: url(/img/share-icons.png) no-repeat -42px -408px;
+        }
+
+            .share-btn-wrp > .email:hover {
+                background: url(/img/share-icons.png) no-repeat -4px -408px;
+                width: 38px;
+            }
+</style>
+
+<ul class="share-btn-wrp">
+    <li class="facebook button-wrap">Facebook</li> <!-- Facebook -->
+    <li class="twitter button-wrap">Tweet</li> <!-- Twitter -->
+    <li class="digg button-wrap">Digg it</li> <!-- Digg -->
+    <li class="stumbleupon button-wrap">Stumbleupon</li> <!-- Sumbleupon -->
+    <li class="delicious button-wrap">Delicious</li> <!-- Delicious -->
+    <!--li class="gplus button-wrap">Google Share</!--li--> <!-- Google Plus -->
+    <li class="email button-wrap">Email</li> <!-- Email -->
+</ul>
+
+<div id="VideoPlayer">
+    
+    <video id="player" autoplay loop controls>
+        <source src="~/videos/Aeis-1.mp4" type="video/mp4">
+        Your browser can't play this kind of video, sorry.
+
+    </video>
+    <a href="/Home/Singapore" id="btnclose"  >X</a>
+
+</div>
+<div style="clear:both"></div>
+
+
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" onclick="videoURL('/videos/showroom1.mp4')" style="background-image:url(/thumbnail/House1.png)"></div>
+        <div class="swiper-slide" onclick="videoURL('/videos/showroom2.mp4')" style="background-image:url(/thumbnail/House2.png)"></div>
+        <div class="swiper-slide" onclick="videoURL('/videos/Aeis-1.mp4')" style="background-image:url(/thumbnail/AEIS.png)"></div>
+        <div class="swiper-slide" onclick="videoURL('/videos/edutrust-1.mp4')" style="background-image:url(/thumbnail/edutrust.png)"></div>
+        <div class="swiper-slide" onclick="videoURL('/videos/rental.mp4')" style="background-image:url(/thumbnail/新加坡的租金.png)"></div>
+        <div class="swiper-slide" onclick="videoURL('/videos/educationlevel.mp4')" style="background-image:url(/thumbnail/兩地教育水平.png)"></div>
+
+        <div class="swiper-slide" onclick="videoURL('/videos/sinaporeHKcompare.mp4')" style="background-image:url(/thumbnail/兩地住居對比.png)"></div>
+
+
+        <div class="swiper-slide" onclick="videoURL('/videos/propertyinvestment.mp4')" style="background-image:url(/thumbnail/物業投資潛力.png)"></div>
+
+
+
+        <!-- Add Pagination -->
+        <!--div class="swiper-pagination"></div-->
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    function videoURL(video) {
+        document.getElementById("player").src = video;
+
+
+    }
+</script>

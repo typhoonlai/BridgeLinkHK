@@ -1,0 +1,37 @@
+﻿@{
+    Layout = "_EmptyLayout.cshtml";
+}
+
+<section>
+    <video id="slider" autoplay  loop controls>
+        <source src="~/videos/Aeis-1.mp4" type="video/mp4">
+        Your browser can't play this kind of video, sorry.
+        
+    </video>
+   <script>
+       // Getting volume level
+       const volume = document.querySelector("video").volume; // 1 
+
+       // Setting volume level
+       document.querySelector("video").volume = 0.5;  // set volume to 50%
+
+   </script>
+    <ul class="navigation">
+        <li><img onclick="videoURL('/videos/Aeis-1.mp4')" src="~/thumbnail/AEIS.png" /></li>
+        <li><img onclick="videoURL('/videos/edutrust-1.mp4')" src="~/thumbnail/edutrust.png" /></li>
+        <li><img src="~/thumbnail/House 1.png" /></li>
+        <li><img src="~/thumbnail/House 2.png" /></li>
+        <li><img src="~/thumbnail/兩地住居對比.png" /></li>
+        <li><img onclick="videoURL('/videos/educationlevel.mp4')" src="~/thumbnail/兩地教育水平.png" /></li>
+        <li><img src="~/thumbnail/新加坡的租金.png" /></li>
+        <li><img src="~/thumbnail/物業投資潛力.png" /></li>
+    </ul>
+</section>
+<script type="text/javascript"> 
+   
+    function videoURL(video) {
+        document.getElementById("slider").src = video;
+
+
+    }
+</script>
