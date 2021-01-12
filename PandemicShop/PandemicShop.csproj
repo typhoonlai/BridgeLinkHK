@@ -277,6 +277,7 @@
     <Content Include="Scripts\jquery.slim.js" />
     <Content Include="Scripts\jquery.slim.min.js" />
     <Content Include="Scripts\owl.js" />
+    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -319,7 +320,6 @@
     <Content Include="Scripts\bootstrap.min.js.map" />
     <Content Include="Scripts\jquery.min.map" />
     <Content Include="Scripts\jquery.slim.min.map" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Product\CategoryList.cshtml" />
     <Content Include="Views\Product\BagDetails.cshtml" />
     <Content Include="Views\Product\Bag_1010.cshtml" />
